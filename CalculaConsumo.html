@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<h3>Alcool ou Gasolina?</h3>
+<script>
+	var capacidadeTanque = 40;
+	var distanciaGasolina = 480;
+	var distanciaAlcool = 300;
+	//var consumoAlcool = Math.round(distanciaAlcool/capacidadeTanque);
+	//var consumoGasolina = Math.round(distanciaGasolina/capacidadeTanque);
+
+	//utilizar o metodo variavel.toFixed(numero decasas decimais) para 
+	//arredondar pode ser melhor que math.round em numeros menores.
+	var consumoAlcool = (distanciaAlcool / capacidadeTanque).toFixed(3);
+	var consumoGasolina = (distanciaGasolina / capacidadeTanque).toFixed(3);
+
+	var precoAlcool = 2.40;
+	var precoGasolina = 2.90;
+	var precoKMGasolina = (precoGasolina / consumoGasolina).toFixed(2);
+	var precoKMAlcool = (precoAlcool / consumoAlcool).toFixed(2);
+
+	document.write("O consumo de gasolina do seu carro é de: "
+			+ consumoGasolina + " KM/L. ");
+	document.write("<br>");
+	document.write("O consumo de Alcool do seu carro é de: " + consumoAlcool
+			+ " KM/L. ");
+	document.write("<br>");
+	document.write("o preço do kilometro a gasolina é: R$" + precoKMGasolina
+			+ " e o preço do kilometro a Alcool é: R$" + precoKMAlcool + "!");
+	document.write("<br>");
+	document.write("por tanto compensa mais utilizat: GASOLINA");
+</script>
