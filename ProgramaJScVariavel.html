@@ -7,9 +7,10 @@ var idadeMaria = 15;
 var idadeJoao  = 16;
 var idadeCarlos = 19;
 
+//O metodo round do objeto math é utilizado para aredondar casas decimais
 
 document.write("a media da idade de maria ("+ idadeMaria + "), joão (" + idadeJoao + "), e Carlos ("+idadeCarlos+") é: " );
-document.write((idadeMaria + idadeJoao + idadeCarlos)/3);
+document.write(Math.round((idadeMaria + idadeJoao + idadeCarlos)/3));
 document.write("<br>");
 
 </script>
@@ -19,6 +20,9 @@ document.write("<br>");
 //Tentativa com outros calculos
 var minhaIdade = 23;
 var anoAtual = 2019;
+document.write("ano atual é: ");
+document.write(anoAtual);
+document.write("<br>");
 document.write("O ano que nasci é: " + (anoAtual - minhaIdade));
 document.write("<br>");
 </script>
