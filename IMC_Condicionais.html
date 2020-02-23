@@ -1,0 +1,39 @@
+<meta charset= 'UTF-8'>
+<script>
+// Bloco de variaveis inicio
+var peso;
+var altura;
+var imc;
+
+// Bloco de variaveis fim
+// Bloco de functions inicio
+function calculoImc(p, a){
+var valorImc = (p /(a * a));
+return valorImc;
+}
+function pulaLinha(){
+document.write('<br>');
+}
+function imprime(texto){
+document.write(texto);
+pulaLinha;
+}
+function estadoIMC(v){
+if(v<18.5){
+imprime('seu IMC é de ' +v+ ', e você esta abaixo do peso!' );
+}
+if(v>18.5 && v<35){
+imprime('seu IMC é de ' +v+ ', e você esta no seu peso ideal!' );
+}
+if( v>35){
+imprime('seu IMC é de ' +v+ ', e você esta em sobrepeso!' );
+}
+}
+// Bloco de functions fim
+//Bloco de execução inicio
+peso = prompt('Informe seu peso em KG!');
+altura = prompt('Informe sua altura em M');
+imc = calculoImc(peso,altura);
+estadoIMC(Math.round(imc))
+//Bloco de execução fim
+</script>
