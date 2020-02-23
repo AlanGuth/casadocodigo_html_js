@@ -1,0 +1,19 @@
+<meta charset = 'UTF-8' >
+    <script>
+  
+var numeroMaquina = Math.round(Math.random() * 10);
+for (var count = 1; count <= 5; count = count + 1) {
+    var chute = prompt('Digite o numero que acredite que estou pensando!');
+    if (chute == numeroMaquina) {
+        document.write('Você acertou, meus parabéns!! O numero em que eu estava pensando era ' + numeroMaquina + ' <br> Numero de tentativas: ' + count);
+        break;
+    } else {
+        document.write('Você errou, tente novamente!! <br> você tem mais ' + (5 - count) + ' tentativas!!')
+		document.write('<br>------------------------------------------------<br>');
+    }
+}
+if (chute != numeroMaquina) {
+    document.write('O numero de tentativas acabou, o numero em que estava pesando era: ' + numeroMaquina);
+}
+
+</script>
