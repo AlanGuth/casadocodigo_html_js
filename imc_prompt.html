@@ -1,0 +1,16 @@
+<meta charset= 'UTF-8'>
+<script>
+var pesoUser = prompt('informe seu peso em quilogramas');
+var alturaUser = prompt('informe sua altura em metros');
+
+var calculoImc = function(peso, altura){
+var imc = (peso / (altura * altura)).toFixed(3);
+return imc;
+}
+
+
+document.write('Seu imc é de: ' + calculoImc(pesoUser,alturaUser) + '<br>');
+
+
+
+</script>
