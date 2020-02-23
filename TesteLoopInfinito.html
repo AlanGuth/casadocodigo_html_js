@@ -1,0 +1,18 @@
+<meta charset = 'UTF-8'>
+
+<script>
+var fibonacci = 1 ;
+var anterior = 1;
+var antAnterior = 1 ;
+var cond = 1
+while(cond == 1){
+document.write(fibonacci);
+antAnterior = anterior
+anterior = fibonacci;
+fibonacci = antAnterior + anterior;
+document.write('<br>');
+if(fibonacci == 377){
+cond = 0;
+}
+}
+</script>
