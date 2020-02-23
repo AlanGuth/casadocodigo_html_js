@@ -1,0 +1,20 @@
+<meta charset = 'UTF-8'>
+<script>
+var vitoria = prompt('Qual numero de vitorias do seu time no campeonato? ' );
+var empate = prompt('Qual numero de empates que seu ntime teve no campeonato? ');
+var ponto = (vitoria * 3 ) + parseInt(empate);
+//parse int é utilizado para que o javascript entenda que o que esteve no prompt n é string mas numero
+document.write('Nosso time tem ' + ponto + ' pontos no campeonato!<br>');
+
+if(ponto > 10){
+document.write('nosso time esta MELHOR que livros velhos!!! <br>');
+}
+if(ponto< 10){
+document.write('nosso time esta PIOR que livros velhos!!! <br>');
+}
+if(ponto == 10){
+document.write('nosso time esta EMPATADO com livros velhos!!! <br>');
+}
+
+
+</script>
