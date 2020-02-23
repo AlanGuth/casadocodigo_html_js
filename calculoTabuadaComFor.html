@@ -1,0 +1,17 @@
+<meta charset='UTF-8'>
+
+<script>
+var tabuada = prompt('Digite o numero de qual deseja saber a tabuada:')
+
+var tabuadaInt = parseInt(tabuada);
+document.write('A tabuada de '+tabuadaInt+ ' é: <br>');
+function mostraTabuada(a,b){
+document.write(a + ' x ' + b + ' = ' + (a*b) +'<br>');
+}
+
+for(var numero = 1; numero<=10 ; numero = numero +1){
+mostraTabuada(numero,tabuada);
+}
+
+
+</script>
