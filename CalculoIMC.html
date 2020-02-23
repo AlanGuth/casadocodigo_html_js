@@ -1,10 +1,11 @@
 <meta charset='UTF-8'>
 <script>
-var pesoKG = 80;
+var pesoKG = 81;
 var alturaCM = 1.72;
 var calculoIMC = function(peso, altura){
 	 var valorIMC = (peso / (altura * altura)).toFixed(3);
+	 return valorIMC;
 };
-var resultadoIMC = (pesoKG, alturaCM);
+var resultadoIMC = calculoIMC(pesoKG, alturaCM);
 document.write('O resultado de seu IMC é: ' + resultadoIMC);
 </script>
