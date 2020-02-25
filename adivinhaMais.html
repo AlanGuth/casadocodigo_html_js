@@ -10,10 +10,20 @@
 // variaveis
 var numeroUsuario = document.getElementById("inptNumUser");
 // metodos
-var btnAdivinhaF = function(){
-alert(numeroUsuario.value);
-}
 
+var numPensando = function(){
+var num = Math.round(Math.random() * 10);
+return num;
+}
+var btnAdivinhaF = function(){
+var num1 = numPensando();
+if ( num1 == numeroUsuario.value){
+alert('Você acertou, o numero em que estava pensando era '+num1+' !');
+}else{
+alert('Você errou, o numero em que estava pensando era '+num1+' !');
+}
+numeroUsuario.value = "";
+}
 //main
 btnAdivinhar.onclick = btnAdivinhaF;
 
