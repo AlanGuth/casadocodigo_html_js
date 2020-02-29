@@ -6,14 +6,18 @@
 <input type="text" id="txtNumerosApostados" value=" ">
 <h3>Confira agora os numeros sorteados </h3>
 <input type="submit" id="btnComparar" value="Conferir">
+<br/>
+<input type="text" id="txtNumerosAcertados" value=" ">
 
 
 
 <script>
   var arrayNumerosUsuario = [];
   var arrayNumeroLoteria = [];
+  var arrayNumeroAcertados = [];
   var count = 0;
   var seusNumeros = document.getElementById('txtNumerosApostados');
+  var seusNumerosAcertados = document.getElementById('txtNumerosAcertados');
   var apostarEsseNumero = function(){
   if(count == 6){
     alert("Você ja apostou numeros o suficiente, va pra casa e aguarde.")
@@ -32,8 +36,29 @@
   txtNumerosUsuario.value = "";
 
   }
+  var conferir = function(){
+    for (var i = 0; i < arrayNumerosUsuario.length; i++) {
+      for (var b = 0; b < arrayNumeroLoteria.length; b++) {
+        if (arrayNumeroLoteria[b] == arrayNumerosUsuario[i]) {
+          arrayNumeroAcertados.push(arrayNumerosUsuario[i]);
+          console.log(arrayNumeroAcertados);
+        }
+      }
+    }
+    if (arrayNumeroAcertados.length == 0) {
+      document.write("Sinto muito, você não acertou numero nenhum, aposte mais.")
+    }else{
+      for (var i = 0; i < arrayNumeroAcertados.length; i++) {
+        if (i == 0) {
+          seusNumerosAcertados.value = arrayNumeroAcertados[i];
+        }else {
+          seusNumerosAcertados.value = seusNumerosAcertados.value +" - "+ arrayNumeroAcertados[i];
+        }
 
+      }
+    }
+  }
   btnSalvar.onclick = apostarEsseNumero;
-
+  btnComparar.onclick = conferir;
 
 </script>
