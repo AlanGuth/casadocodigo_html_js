@@ -12,8 +12,15 @@ numSorteados.push(numero);
 }
 
 var confereLista = function(){
-
+var numero = document.getElementById('txtBxNumSorteados').value;
+for (var i = 0; i < numSorteados.length; i++) {
+  if (numero == numSorteados[i]) {
+    document.write('Este numero ja foi sorteado!');
+    break;
+  }
+}
+addNumeroSorteados();
 }
 
-btnEnviaNumSorteados.onclick = addNumeroSorteados
+btnEnviaNumSorteados.onclick = confereLista;
 </script>
