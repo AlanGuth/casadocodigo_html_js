@@ -3,13 +3,37 @@
 <input type="text" id="txtNumerosUsuario">
 <input type="submit"id="btnSalvar"value="Salve os numeros">
 <br/>
-<input type="text" id="txtNumerosApostados" >
-<h3>$$$ Confira agora os numeros sorteados $$$</h3>
+<input type="text" id="txtNumerosApostados" value=" ">
+<h3>Confira agora os numeros sorteados </h3>
 <input type="submit" id="btnComparar" value="Conferir">
 
 
+
 <script>
-var SorteioLoteria = function(){
-  
-}
+  var arrayNumerosUsuario = [];
+  var arrayNumeroLoteria = [];
+  var count = 0;
+  var seusNumeros = document.getElementById('txtNumerosApostados');
+  var apostarEsseNumero = function(){
+  if(count == 6){
+    alert("Você ja apostou numeros o suficiente, va pra casa e aguarde.")
+    return;}
+  arrayNumerosUsuario.push(document.getElementById('txtNumerosUsuario').value);
+  //alert("Você apostou o numero "+arrayNumerosUsuario[arrayNumerosUsuario.length -1]+" boa sorte meu querido!");
+  arrayNumeroLoteria.push(Math.round(Math.random() * 60));
+  console.log(arrayNumerosUsuario);
+  console.log(arrayNumeroLoteria);
+  if (count == 0) {
+    seusNumeros.value =   document.getElementById('txtNumerosUsuario').value;
+  }else{
+    seusNumeros.value =  seusNumeros.value + " - " +  document.getElementById('txtNumerosUsuario').value;
+  }
+  count = count + 1;
+  txtNumerosUsuario.value = "";
+
+  }
+
+  btnSalvar.onclick = apostarEsseNumero;
+
+
 </script>
