@@ -1,6 +1,30 @@
 <meta charset="UTF-8">
-<canvas id="tela" width="600" heigth="400"></canvas>
+<canvas id="tela" width="600" height="400"></canvas>
 <script>
 var tela = document.getElementById("tela");
 var d = tela.getContext("2d");
+d.fillStyle="green";
+d.fillRect(0,0,200,400);
+var desenhaCirculo = function (x,y,tamanho,cor){
+d.fillStyle = cor;
+d.arc(x,y,tamanho,0,2*Math.PI);
+d.fill();
+};
+var limpaTela = function(){
+	d.clearRect(0,0,600,400);
+};
+var x = 1
+var desenha = function(){
+limpaTela();
+desenhaCirculo(x,100,10,"blue");
+x=x+1;
+};
+setInterval(desenha, 30);
+
+
+
+/*for(var x = 0; x<600; x=x+1){
+	limpaTela();
+	desenhaCirculo(x,100,10,"blue");
+};*/
 </script>
