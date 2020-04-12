@@ -2,13 +2,40 @@
 <canvas id="tela" width="600" height="400"></canvas>
 <script>
 
-var desenhaQuadradoVerde = function(x,y){
+var desenhaQuadrado = function(x,y,cor){
 var tela= document.getElementById("tela");
 var p = tela.getContext("2d");
-p.fillStyle="green";	
+p.fillStyle=cor;	
 p.fillRect(x,y,50,50);
+p.strokeStyle="black";
+p.strokeRect(x,y,50,50);
 }
-desenhaQuadradoVerde(0,0);
+//desenhaQuadradoVerde(0,0);
+var desenhaBola = function (x,y,tamanho,cor){
+	var tela = document.getElementById("tela");
+	var p = tela.getContext("2d");
+	p.fillStyle=cor;
+	p.arc(x,y,tamanho,0,2*3.14);
+	p.fill();
+}
+
+/*var x = 0
+while (x < 600){
+	desenhaQuadrado(x,0,"green");
+	x = x + 50;
+}*/
+
+for(var x = 0; x<600 ; x= x +50){
+	desenhaQuadrado(x,0,"green");
+	desenhaQuadrado(x, 50,"red");
+	desenhaBola(x+25,100,25,"blue");	
+	
+	
+}
+
+
+
+
 </script>
 
 
