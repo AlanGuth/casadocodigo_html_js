@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<canvas id="tela" width="600" height="400"></canvas>
+<script>
+
+var desenhaQuadradoVerde = function(x,y){
+var tela= document.getElementById("tela");
+var p = tela.getContext("2d");
+p.fillStyle="green";	
+p.fillRect(x,y,50,50);
+}
+desenhaQuadradoVerde(0,0);
+</script>
+
+
