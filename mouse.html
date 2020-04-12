@@ -1,6 +1,19 @@
 <meta charset="UTF-8">
 <canvas id="tela" width="600" height="400"></canvas>
 <script>
+var tela = document.getElementById("tela");
+var p = tela.getContext("2d");
+p.fillStyle="grey";
+p.fillRect(0,0,600,400);
+tela.onclick = function(evento){
+	var x = evento.pageX - tela.offsetLeft;
+	var y = evento.pageY- tela.offsetTop;
+	p.fillStyle = "blue";
+	p.beginPath();
+	p.arc(x,y,10,0,2*3.14);
+	p.fill();
 
+console.log("A posição do clique foi " + x + " e " +y+"!");
+}
 
 </script>
